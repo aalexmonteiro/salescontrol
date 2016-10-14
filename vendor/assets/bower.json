@@ -1,6 +1,7 @@
 {
   "name": "dsl-generated-dependencies",
   "dependencies": {
-    "angular-material": "latest"
+    "materialize": "latest",
+    "material-design-icons": "latest"
   }
 }
