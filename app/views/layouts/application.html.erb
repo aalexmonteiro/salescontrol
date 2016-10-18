@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <blockquote><%= notice %></blockquote>​
-    <blockquote><%= alert %></blockquote>
+    <blockquote>
+    	<span class="blue-text text-darken-2"><%= notice %></span>
+    </blockquote>​
+    <blockquote>
+    	<span class="red-text text-darken-2"><%= alert %></span>
+    </blockquote>
 <%= yield %>
 
 </body>
