@@ -25,6 +25,8 @@ Rails.application.configure do
     password: ENV["PASSWORD"]
   }
 
+  Faker::Config.locale = 'pt-BR'
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
 

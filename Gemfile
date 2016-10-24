@@ -26,6 +26,7 @@ gem 'bower-rails'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'faker'
 
 
 # Use ActiveModel has_secure_password

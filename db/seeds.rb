@@ -5,3 +5,11 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Faker::Config.locale = 'pt-BR'
+
+100.times do |i|
+	Customer.create!(
+		name: Faker::Name.name_with_middle,
+		phone: "#{Faker::PhoneNumber.phone_number}#{i}")
+end
