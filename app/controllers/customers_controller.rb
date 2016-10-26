@@ -1,7 +1,14 @@
 class CustomersController < ApplicationController
 	def index
-		@customers = Customer.all.limit(10)
+		if params[:keywords].present?
+			@keywords = params[:keywords]
+			customer_search = CustomerSearch.new(@keywords)
+			@customers = Customer.where(
+				customer_search.where_clause,
+				customer_search.where_args)
+				.order(customer_search.order)
+		else
+			@customers = []
+		end
 	end
-	
-	
 end
