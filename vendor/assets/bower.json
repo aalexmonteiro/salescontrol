@@ -2,6 +2,10 @@
   "name": "dsl-generated-dependencies",
   "dependencies": {
     "materialize": "latest",
-    "material-design-icons": "latest"
+    "material-design-icons": "latest",
+    "angular": "~> 1.5"
+  },
+  "resolutions": {
+    "angular": "1.5"
   }
 }
