@@ -7,12 +7,8 @@
       <form class="col s12">
         <div class="row">
           <div class="input-field col s9">
-            <input placeholder="Nome" id="search" type="text" name="keywords" ng-model="keywords"></input>
-          </div>
-          <div class="col s3">
-            <button class="btn-floating btn-large waves-effect waves-light" ng-click="search(keywords)">
-            <i class="material-icons">search</i>
-            </button>
+            <input id="search" type="text" name="keywords" ng-change="search(keywords)" ng-model="keywords"></input>
+            <label for="search"><i class="material-icons">search</i></label>
           </div>
         </div>
       </form>
