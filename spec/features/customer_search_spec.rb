@@ -3,15 +3,18 @@ require 'rails_helper'
 klass = CustomerSearch
 describe klass do
 	before :all do
-		name ||= Faker::Name.name_with_middle
+		name ||= 'Alex'
 		phone ||= Faker::PhoneNumber.phone_number
-		klass.new('ale')
-		Customer.create!(name: name, phone: phone)
+		@customerSearch = klass.new(':name')
 	end
 
-	describe 'search' do
+	describe 'Creating a query' do
+		it 'setting the where clause' do
+			 expect(@customerSearch.where_clause).to eq('lower(name) like :name')
+		end
+
 		it 'search a customer' do
-			 
+			 expect(@customerSearch.where_args).to eq({:name=>"%:name%"})
 		end
 	end
 end
