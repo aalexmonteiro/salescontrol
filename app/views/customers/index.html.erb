@@ -1,33 +1,3 @@
-<article ng-app="customers" ng-controller="CustomerSearchController">
-  <header>
-    <h4>Buscar Clientes</h4>
-  </header>
-  <section class="section">
-    <div class="row">
-      <form class="col s12">
-        <div class="row">
-          <div class="input-field col s9">
-            <input id="search" type="text" name="keywords" ng-change="search(keywords)" ng-model="keywords"></input>
-            <label for="search"><i class="material-icons">search</i></label>
-          </div>
-        </div>
-      </form>
-    </div>
-  </section>
-  <section class="section" ng-if="customers.length > 0">
-    <header>
-      <h4>Resultados</h4>
-    </header>
-    <%= render partial: "pager", locals:{keywords: @keywords, page: @page} %>
-    <ul class="collection avatar">
-      <li class="collection-item" ng-repeat="customer in customers">
-        <span class="title"><h5>{{customer.name}}</h5></span>
-        <p>
-          {{customer.phone}}
-          <a href="#!" class="secondary-content"><i class="material-icons">person</i></a>
-        </p>
-      </li>
-    </ul>
-    <%= render partial: "pager", locals:{keywords: @keywords, page: @page} %>
-  </section>
+<article ng-app="customers">
+  <div ng-view></div>
 </article>

@@ -1,0 +1,38 @@
+<article>
+	<header>
+		<h4>Buscar Clientes</h4>
+	</header>
+	<div class="row">
+		<form novalidate name="edit_customer" class="col s12">
+			<div class="row">
+				<div class="input-field col s6">
+					<input type="text" id="edit-name" name="name" ng-model="customer.name" autofocus required>
+					<label for="edit-name">Nome</label>
+					<p ng-messages="edit_customer.name.$error">
+						<span ng-message="required" class="red-text text-darken-2">
+							Nome é obrigatório
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s6">
+					<input type="text" id="edit-phone" name="phone" ng-model="customer.phone" autofocus required>
+					<label for="edit-phone">Phone:</label>
+					<p ng-messages="edit_customer.phone.$error">
+						<span ng-message="required" class="red-text text-darken-2">
+							Telefone é obrigatório
+						</span>
+					</p>
+				</div>
+			</div>
+			<div>
+				<button class="btn waves-effect waves-light" ng-click="save()"
+					ng-disabled="edit_customer.$invalid || edit_customer.pristine">
+					Salvar
+				</button>
+				<a class="btn waves-effect waves-light" ng-click="cancel()">Cancelar</a>
+			</div>
+		</form>
+	</div>
+</article>

@@ -1,4 +1,7 @@
 asset 'materialize'
 asset 'material-design-icons'
 asset 'angular', '~> 1.5'
+asset 'angular-route'
+asset 'angular-resource'
+asset 'angular-messages'
 resolution 'angular', '1.5'
